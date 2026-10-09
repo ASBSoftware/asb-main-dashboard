@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,14 +9,9 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap"
-        rel="stylesheet"
-    >
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
 
     <style>
-
         * {
             margin: 0;
             padding: 0;
@@ -26,17 +22,12 @@
             --green: #0b4f3b;
             --green-dark: #073d2e;
             --green-light: #16634c;
-
             --cream: #f5f2ea;
             --cream-dark: #ebe6da;
-
             --gold: #a18739;
-
             --text: #18352d;
             --muted: #6b776f;
-
             --white: #ffffff;
-
             --border: rgba(11, 79, 59, 0.14);
         }
 
@@ -51,48 +42,31 @@
             overflow-x: hidden;
         }
 
-
-        /* =========================================
-           BACKGROUND LINE PATTERN
-        ========================================= */
-
+        /* BACKGROUND LINE PATTERN */
         body::before {
             content: "";
             position: fixed;
             inset: 0;
-
             opacity: 0.12;
-
             pointer-events: none;
-
-            background-image:
-                repeating-radial-gradient(
-                    ellipse at 20% 20%,
-                    transparent 0,
-                    transparent 22px,
-                    rgba(11, 79, 59, 0.25) 23px,
-                    transparent 24px
-                );
-
+            background-image: repeating-radial-gradient(
+                ellipse at 20% 20%,
+                transparent 0,
+                transparent 22px,
+                rgba(11, 79, 59, 0.25) 23px,
+                transparent 24px
+            );
             z-index: -1;
         }
 
-
-        /* =========================================
-           HEADER
-        ========================================= */
-
+        /* HEADER */
         header {
-            height: 92px;
-
-            padding: 0 5%;
-
+            min-height: 92px;
+            padding: 20px 5%;
             display: flex;
             align-items: center;
             justify-content: space-between;
-
             background: var(--green);
-
             color: white;
         }
 
@@ -105,17 +79,14 @@
         .logo {
             width: 50px;
             height: 50px;
-
             display: flex;
             align-items: center;
             justify-content: center;
-
-            border: 1px solid rgba(255,255,255,0.55);
-
+            border: 1px solid rgba(255, 255, 255, 0.55);
             font-size: 14px;
             font-weight: 600;
-
             letter-spacing: 1px;
+            flex-shrink: 0;
         }
 
         .brand-name {
@@ -125,22 +96,16 @@
 
         .brand-subtitle {
             margin-top: 3px;
-
             font-size: 11px;
-
             opacity: 0.68;
         }
 
         .site-link {
             color: white;
-
             text-decoration: none;
-
             font-size: 12px;
             font-weight: 500;
-
             opacity: 0.9;
-
             transition: opacity 0.2s ease;
         }
 
@@ -148,72 +113,48 @@
             opacity: 0.65;
         }
 
-
-        /* =========================================
-           HERO
-        ========================================= */
-
+        /* HERO */
         .hero {
             min-height: 390px;
-
-            padding:
-                80px 7%
-                70px;
-
+            padding: 80px 7% 70px;
             background: var(--green);
-
             color: white;
-
             position: relative;
-
             overflow: hidden;
         }
 
         .hero::after {
             content: "";
-
             position: absolute;
-
             width: 650px;
             height: 650px;
-
             right: -140px;
             bottom: -420px;
-
-            border: 1px solid rgba(255,255,255,0.14);
-
+            border: 1px solid rgba(255, 255, 255, 0.14);
             border-radius: 50%;
-
             box-shadow:
-                0 0 0 35px rgba(255,255,255,0.025),
-                0 0 0 70px rgba(255,255,255,0.02),
-                0 0 0 105px rgba(255,255,255,0.018),
-                0 0 0 140px rgba(255,255,255,0.016),
-                0 0 0 175px rgba(255,255,255,0.014),
-                0 0 0 210px rgba(255,255,255,0.012);
-
+                0 0 0 35px rgba(255, 255, 255, 0.025),
+                0 0 0 70px rgba(255, 255, 255, 0.02),
+                0 0 0 105px rgba(255, 255, 255, 0.018),
+                0 0 0 140px rgba(255, 255, 255, 0.016),
+                0 0 0 175px rgba(255, 255, 255, 0.014),
+                0 0 0 210px rgba(255, 255, 255, 0.012);
             pointer-events: none;
         }
 
         .hero-inner {
             max-width: 1180px;
             margin: auto;
-
             position: relative;
             z-index: 2;
         }
 
         .hero h1 {
             max-width: 900px;
-
             font-family: "DM Serif Display", serif;
-
             font-size: clamp(52px, 7vw, 94px);
-
             line-height: 0.98;
-
             font-weight: 400;
-
             letter-spacing: -2px;
         }
 
@@ -221,57 +162,32 @@
             display: block;
         }
 
-
-        /* =========================================
-           DASHBOARDS
-        ========================================= */
-
+        /* DASHBOARD AREA */
         .dashboard-area {
             max-width: 1180px;
-
             margin: -25px auto 0;
-
-            padding:
-                0 30px
-                90px;
-
+            padding: 0 30px 90px;
             position: relative;
             z-index: 5;
         }
 
         .dashboard-grid {
             display: grid;
-
-            grid-template-columns:
-                repeat(2, minmax(0, 1fr));
-
+            grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 20px;
         }
 
-
-        /* =========================================
-           CARDS
-        ========================================= */
-
+        /* DASHBOARD CARDS */
         .dashboard-card {
             min-height: 245px;
-
             padding: 30px;
-
             background: var(--white);
-
             border: 1px solid var(--border);
-
             text-decoration: none;
-
             color: var(--text);
-
             display: flex;
-
             flex-direction: column;
-
             justify-content: space-between;
-
             transition:
                 transform 0.3s ease,
                 box-shadow 0.3s ease,
@@ -280,68 +196,48 @@
 
         .dashboard-card:hover {
             transform: translateY(-5px);
-
-            box-shadow:
-                0 18px 45px rgba(12, 63, 47, 0.12);
-
+            box-shadow: 0 18px 45px rgba(12, 63, 47, 0.12);
             background: #fcfcfa;
         }
 
+        .dashboard-card:focus-visible {
+            outline: 3px solid var(--gold);
+            outline-offset: 4px;
+        }
 
-        /* =========================================
-           ICON
-        ========================================= */
-
+        /* ICON */
         .icon {
             width: 54px;
             height: 54px;
-
             display: flex;
             align-items: center;
             justify-content: center;
-
             background: var(--cream);
-
             border: 1px solid var(--border);
-
             font-size: 23px;
         }
 
-
-        /* =========================================
-           CARD NAME
-        ========================================= */
-
+        /* CARD TITLE */
         .card-title {
             margin-top: 40px;
-
             font-family: "DM Serif Display", serif;
-
             font-size: 30px;
-
             line-height: 1.05;
-
             font-weight: 400;
-
             color: var(--green-dark);
         }
 
         .card-bottom {
             display: flex;
-
             justify-content: space-between;
-
             align-items: center;
-
             margin-top: 30px;
         }
 
         .card-line {
             width: 45px;
             height: 1px;
-
             background: var(--gold);
-
             transition: width 0.3s ease;
         }
 
@@ -352,18 +248,12 @@
         .arrow {
             width: 38px;
             height: 38px;
-
             border: 1px solid var(--border);
-
             display: flex;
-
             align-items: center;
             justify-content: center;
-
             color: var(--green);
-
             font-size: 17px;
-
             transition:
                 background 0.25s ease,
                 color 0.25s ease;
@@ -371,63 +261,54 @@
 
         .dashboard-card:hover .arrow {
             background: var(--green);
-
             color: white;
         }
 
-
-        /* =========================================
-           FOOTER
-        ========================================= */
-
+        /* FOOTER */
         footer {
-            padding:
-                30px;
-
+            padding: 30px;
             text-align: center;
-
             color: var(--muted);
-
             background: var(--cream-dark);
-
             font-size: 11px;
         }
 
-
-        /* =========================================
-           MOBILE
-        ========================================= */
-
+        /* MOBILE */
         @media (max-width: 750px) {
-
             header {
-                height: 75px;
-
-                padding: 0 20px;
+                min-height: 75px;
+                padding: 15px 20px;
             }
 
             .site-link {
                 display: none;
             }
 
+            .brand {
+                gap: 12px;
+            }
+
+            .logo {
+                width: 44px;
+                height: 44px;
+            }
+
+            .brand-name {
+                font-size: 13px;
+            }
+
             .hero {
                 min-height: 300px;
-
-                padding:
-                    60px 24px
-                    65px;
+                padding: 60px 24px 65px;
             }
 
             .hero h1 {
                 font-size: 52px;
-
                 letter-spacing: -1px;
             }
 
             .dashboard-area {
-                padding:
-                    0 20px
-                    60px;
+                padding: 0 20px 60px;
             }
 
             .dashboard-grid {
@@ -436,217 +317,176 @@
 
             .dashboard-card {
                 min-height: 215px;
+                padding: 26px;
             }
 
+            .card-title {
+                font-size: 28px;
+                margin-top: 30px;
+            }
         }
 
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                transition-duration: 0.01ms !important;
+                animation-duration: 0.01ms !important;
+            }
+        }
     </style>
 </head>
 
-
 <body>
 
+    <!-- HEADER -->
+    <header>
+        <div class="brand">
+            <div class="logo">ASB</div>
 
-<header>
+            <div>
+                <div class="brand-name">
+                    American School of Bombay
+                </div>
 
-    <div class="brand">
-
-        <div class="logo">
-            ASB
-        </div>
-
-        <div>
-            <div class="brand-name">
-                American School of Bombay
-            </div>
-
-            <div class="brand-subtitle">
-                Technology & Systems
+                <div class="brand-subtitle">
+                    Technology &amp; Systems
+                </div>
             </div>
         </div>
 
-    </div>
-
-
-    <a
-        href="https://www.asbindia.org/"
-        target="_blank"
-        class="site-link"
-    >
-        asbindia.org ↗
-    </a>
-
-</header>
-
-
-
-<section class="hero">
-
-    <div class="hero-inner">
-
-        <h1>
-            ASB dashboards,
-            <span>all in one place.</span>
-        </h1>
-
-    </div>
-
-</section>
-
-
-
-<main class="dashboard-area">
-
-    <div class="dashboard-grid">
-
-
-        <!-- ATTENDANCE -->
-
         <a
-            href="https://asb-attendance-dashboard.web.app/"
+            href="https://www.asbindia.org/"
             target="_blank"
-            class="dashboard-card"
+            rel="noopener noreferrer"
+            class="site-link"
         >
-
-            <div>
-
-                <div class="icon">
-                    📊
-                </div>
-
-                <div class="card-title">
-                    Attendance Dashboard
-                </div>
-
-            </div>
-
-            <div class="card-bottom">
-
-                <div class="card-line"></div>
-
-                <div class="arrow">
-                    ↗
-                </div>
-
-            </div>
-
+            asbindia.org ↗
         </a>
+    </header>
 
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-inner">
+            <h1>
+                ASB dashboards,
+                <span>all in one place.</span>
+            </h1>
+        </div>
+    </section>
 
+    <!-- DASHBOARDS -->
+    <main class="dashboard-area">
+        <div class="dashboard-grid">
 
-        <!-- IAQ -->
-
-        <a
-            href="https://asbsoftware.github.io/asb-aqi-dashboard/"
-            target="_blank"
-            class="dashboard-card"
-        >
-
-            <div>
-
-                <div class="icon">
-                    🌿
+            <!-- ATTENDANCE DASHBOARD -->
+            <a
+                href="https://asb-attendance-dashboard.web.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="dashboard-card"
+            >
+                <div>
+                    <div class="icon">📊</div>
+                    <div class="card-title">
+                        Attendance Dashboard
+                    </div>
                 </div>
 
-                <div class="card-title">
-                    iAQ Dashboard
+                <div class="card-bottom">
+                    <div class="card-line"></div>
+                    <div class="arrow">↗</div>
+                </div>
+            </a>
+
+            <!-- iAQ DASHBOARD -->
+            <a
+                href="https://asbsoftware.github.io/asb-aqi-dashboard/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="dashboard-card"
+            >
+                <div>
+                    <div class="icon">🌿</div>
+                    <div class="card-title">
+                        iAQ Dashboard
+                    </div>
                 </div>
 
-            </div>
+                <div class="card-bottom">
+                    <div class="card-line"></div>
+                    <div class="arrow">↗</div>
+                </div>
+            </a>
 
-            <div class="card-bottom">
-
-                <div class="card-line"></div>
-
-                <div class="arrow">
-                    ↗
+            <!-- ADMISSIONS DASHBOARD -->
+            <a
+                href="https://asb-admissions-dashboard.web.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="dashboard-card"
+            >
+                <div>
+                    <div class="icon">🎓</div>
+                    <div class="card-title">
+                        Admission Dashboard
+                    </div>
                 </div>
 
-            </div>
+                <div class="card-bottom">
+                    <div class="card-line"></div>
+                    <div class="arrow">↗</div>
+                </div>
+            </a>
 
-        </a>
-
-
-
-        <!-- ADMISSIONS -->
-
-        <a
-            href="https://asb-admissions-dashboard.web.app/"
-            target="_blank"
-            class="dashboard-card"
-        >
-
-            <div>
-
-                <div class="icon">
-                    🎓
+            <!-- ENROLMENT DASHBOARD -->
+            <a
+                href="https://asb-admissions-dashboard.web.app/enrolment/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="dashboard-card"
+            >
+                <div>
+                    <div class="icon">👥</div>
+                    <div class="card-title">
+                        Enrolment Dashboard
+                    </div>
                 </div>
 
-                <div class="card-title">
-                    Admission Dashboard
+                <div class="card-bottom">
+                    <div class="card-line"></div>
+                    <div class="arrow">↗</div>
+                </div>
+            </a>
+
+            <!-- YOY ENROLMENT TREND DASHBOARD -->
+            <a
+                href="https://asb-admissions-dashboard.web.app/enrolment-trend/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="dashboard-card"
+            >
+                <div>
+                    <div class="icon">📈</div>
+                    <div class="card-title">
+                        YoY Enrolment Trend Dashboard
+                    </div>
                 </div>
 
-            </div>
-
-            <div class="card-bottom">
-
-                <div class="card-line"></div>
-
-                <div class="arrow">
-                    ↗
+                <div class="card-bottom">
+                    <div class="card-line"></div>
+                    <div class="arrow">↗</div>
                 </div>
+            </a>
 
-            </div>
+        </div>
+    </main>
 
-        </a>
-
-
-
-        <!-- ENROLMENT -->
-
-        <a
-            href="https://asb-admissions-dashboard.web.app/enrolment/"
-            target="_blank"
-            class="dashboard-card"
-        >
-
-            <div>
-
-                <div class="icon">
-                    👥
-                </div>
-
-                <div class="card-title">
-                    Enrolment Dashboard
-                </div>
-
-            </div>
-
-            <div class="card-bottom">
-
-                <div class="card-line"></div>
-
-                <div class="arrow">
-                    ↗
-                </div>
-
-            </div>
-
-        </a>
-
-
-    </div>
-
-</main>
-
-
-
-<footer>
-
-    American School of Bombay
-
-</footer>
-
+    <!-- FOOTER -->
+    <footer>
+        American School of Bombay
+    </footer>
 
 </body>
 </html>
